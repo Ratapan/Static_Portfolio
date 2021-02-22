@@ -1,30 +1,25 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <header>
+    <div id="nav" class="shadow p-2 mb-5 bg-white rounded">
+      <a class="navbar-brand" href="/">
+        <img src="./assets/logo.png" width="35" height="35" class="d-inline-block" alt="">
+        
+      </a>
+      <router-link to="/">RTP</router-link> /
+      <router-link to="/Apis">Apis</router-link> /
+      <router-link to="/Demos">Demos</router-link> /
+
+    </div>
+  </header>
   <router-view/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+.shadow{
+  margin-left: 5px;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+a{
+  color: rgb(0, 143, 83);
+  font-size: 20px;
 }
 </style>
