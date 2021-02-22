@@ -1,25 +1,32 @@
 <template>
   <header>
-    <div id="nav" class="shadow p-2 mb-5 bg-white rounded">
+    <div id="nav" class="p-2 mb-5 bg-white shadow">
       <a class="navbar-brand" href="/">
-        <img src="./assets/logo.png" width="35" height="35" class="d-inline-block" alt="">
+        <img src="./assets/logo.png" width="45" height="45" class="d-inline-block" alt="">
         
       </a>
-      <router-link to="/">RTP</router-link> /
-      <router-link to="/Apis">Apis</router-link> /
-      <router-link to="/Demos">Demos</router-link> /
-
+      <router-link class="li" to="/">RTP</router-link> 
+      <router-link class="li" to="/Apis">Apis</router-link>  
+      <router-link class="li" to="/Demos">Demos</router-link> 
     </div>
   </header>
   <router-view/>
 </template>
 
 <style scoped>
+
 .shadow{
-  margin-left: 5px;
+  box-shadow: 0 8px 6px -6px black;
+  
 }
-a{
-  color: rgb(0, 143, 83);
-  font-size: 20px;
+.li{
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px;
+  border: 2px solid black;
+  margin-right: 5px;
+  padding: 5px 15px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
 }
+
 </style>
