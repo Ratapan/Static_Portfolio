@@ -92,14 +92,12 @@ export default {
       this.result = `${this.operator(
         parseFloat(this.pre),
         parseFloat(this.result)
-      ).toFixed(2)}`;
+      )}`;
       this.pre = null;
     },
     appenHistory(){
-      console.log(this.pre)
       var node = `${this.pre.toString()}${this.op}${this.result.toString()} = ${this.operator(parseFloat(this.pre),parseFloat(this.result)).toFixed(2)}`;
       this.history.unshift(node);
-      console.log(this.history,'🥙');
     },
     openClose(){
       if(this.historyStatus == true){
@@ -119,6 +117,8 @@ export default {
   box-shadow: 4px 4px #e6e6e6;
   width: 85%;
   margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
@@ -130,7 +130,7 @@ export default {
   color: aliceblue;
   grid-column: 1 / 5;
   text-align: center;
-  margin: 15px;
+  margin: 10px;
 }
 .cero {
   grid-column: 1 / 3;
@@ -169,7 +169,7 @@ export default {
 .list h3{
   text-align: center;
   padding: 5px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 0px;
 }
 </style>
